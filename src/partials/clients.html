@@ -1,0 +1,27 @@
+<h1>Lista de Clientes</h1>
+<div class="col-8">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Telefone</th>
+        <th></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+    <tr ng-repeat="client in clients">
+      <td>{{client.name}}</td>
+      <td>{{client.email}}</td>
+      <td>{{client.phone}}</td>
+      <td>
+        <div class="btn-group container">
+          <a href="#!/clients/{{client.$id}}" class="btn btn-primary btn-sm">editar</a>
+          <a ng-click="deleteClient(client)" class="btn btn-danger btn-sm">remover</a>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

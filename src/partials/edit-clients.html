@@ -1,0 +1,171 @@
+<h1>Editar Cliente</h1>
+
+<form class="col-6" ng-submit="editClient(client.$id)">
+  <div class="form-row">
+
+    <div class="form-group py-2">
+      <label for="name">Nome</label>
+      <input
+        name="name"
+        type="text"
+        class="form-control"
+        id="name" placeholder="Name"
+        ng-model="client.name"
+        required
+      >
+    </div>
+    <div class="alert alert-danger px-3 py-1" ng-show="addClient.name.$error.required && addClient.name.$dirty">
+      Digite um nome
+    </div>
+
+    <div class="form-group py-2">
+      <label for="email">Email</label>
+      <input
+        name="email"
+        type="email"
+        class="form-control"
+        id="email"
+        placeholder="Email"
+        ng-model="client.email"
+        required
+      >
+    </div>
+    <div class="alert alert-danger px-3 py-1" ng-show="addClient.email.$error.required && addClient.email.$dirty">
+      Digite um email
+    </div>
+
+    <div class="form-group py-2">
+      <label for="phone">Telefone</label>
+      <input
+        name="phone"
+        type="text"
+        class="form-control"
+        id="phone"
+        placeholder="Telefone"
+        ng-model="client.phone"
+        required
+      >
+    </div>
+    <div class="alert alert-danger px-3 py-1" ng-show="addClient.phone.$error.required && addClient.phone.$dirty">
+      Digite um telefone
+    </div>
+
+    <div class="form-group col-3 py-2">
+      <label for="address">CEP</label>
+      <input
+        name="cep"
+        type="text"
+        class="form-control"
+        id="cep"
+        placeholder="CEP"
+        ng-blur="buscarCep(client.cep)"
+        ng-model="client.cep"
+        required
+      >
+    </div>
+    <div class="alert alert-danger px-3 py-1" ng-show="addClient.phone.$error.required && addClient.phone.$dirty">
+      Digite um CEP
+    </div>
+
+    <div class="row">
+
+      <div class="col form-group py-2">
+        <label for="address">Logradouro</label>
+        <input
+          name="address"
+          type="text" 
+          class="form-control"
+          id="address"
+          placeholder="Logradouro"
+          ng-model="client.address"
+          required
+        >
+      </div>
+      <div class="alert alert-danger px-3 py-1" ng-show="addClient.address.$error.required && addClient.address.$dirty">
+        Digite um logradouro
+      </div>
+
+      <div class="col form-group col-3 py-2">
+        <label for="number">Número</label>
+        <input
+          name="number"
+          type="text"
+          class="form-control"
+          id="number"
+          placeholder="Número"
+          ng-model="client.number"
+          required
+        >
+      </div>
+      <div class="alert alert-danger px-3 py-1" ng-show="addClient.number.$error.required && addClient.number.$dirty">
+        Digite um número
+      </div>
+
+    </div>
+    
+    <div class="form-group py-2">
+      <label for="complement">Complemento</label>
+      <input
+        type="text"
+        class="form-control"
+        id="complement"
+        placeholder="Complemento"
+        ng-model="client.complement"
+      >
+    </div>
+
+    <div class="form-group py-2">
+      <label for="neighborhood">Bairro</label>
+      <input
+        name="neighborhood"
+        type="text"
+        class="form-control"
+        id="neighborhood"
+        placeholder="Bairro"
+        ng-model="client.neighborhood"
+        required
+      >
+    </div>
+    <div class="alert alert-danger px-3 py-1" ng-show="addClient.neighborhood.$error.required && addClient.neighborhood.$dirty">
+      Digite um bairro
+    </div>
+
+    <div class="form-group py-2">
+      <label for="city">Cidade</label>
+      <input
+        name="city"
+        type="text"
+        class="form-control"
+        id="city"
+        placeholder="Cidade"
+        ng-model="client.city"
+        required
+      >
+    </div>
+    <div class="alert alert-danger px-3 py-1" ng-show="addClient.city.$error.required && addClient.city.$dirty">
+      Digite um cidade
+    </div>
+
+    <div class="form-group py-2">
+      <label for="state">Estado</label>
+      <input
+        name="state"
+        type="text"
+        class="form-control"
+        id="state"
+        placeholder="Estado"
+        ng-model="client.state"
+        required
+      >
+    </div>
+    <div class="alert alert-danger px-3 py-1" ng-show="addClient.state.$error.required && addClient.state.$dirty">
+      Digite um estado
+    </div>
+  </div>
+  
+  <div class="my-3 d-grid gap-2">
+    <button type="submit" class="btn btn-primary btn-block">Salvar</button>
+    <a href="#!/clients" class="btn btn-danger">Cancelar</a>
+  </div>
+
+</form>
