@@ -1,6 +1,9 @@
 <h1>Lista de Clientes</h1>
 <div class="col-8">
-  <table class="table">
+  
+  <p class="text-center" ng-show="clients.length == 0">Não existem clientes cadastrados.</p>
+
+  <table ng-show="clients.length > 0" class="table">
     <thead>
       <tr>
         <th>Nome</th>
