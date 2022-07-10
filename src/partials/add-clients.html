@@ -1,6 +1,6 @@
 <h1>Adicionar Cliente</h1>
 
-<form name="addClient" class="col-6" ng-submit="addClient()">
+<form name="addClientForm" class="col-6" ng-submit="addClient()">
   <div class="form-row">
 
     <div class="form-group py-2">
@@ -14,7 +14,7 @@
         required
       >
     </div>
-    <div class="alert alert-danger px-3 py-1" ng-show="addClient.name.$error.required && addClient.name.$dirty">
+    <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.name.$error.required && addClientForm.name.$dirty">
       Digite um nome
     </div>
 
@@ -30,7 +30,7 @@
         required
       >
     </div>
-    <div class="alert alert-danger px-3 py-1" ng-show="addClient.email.$error.required && addClient.email.$dirty">
+    <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.email.$error.required && addClientForm.email.$dirty">
       Digite um email
     </div>
 
@@ -47,7 +47,7 @@
         required
       >
     </div>
-    <div class="alert alert-danger px-3 py-1" ng-show="addClient.phone.$error.required && addClient.phone.$dirty">
+    <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.phone.$error.required && addClientForm.phone.$dirty">
       Digite um telefone
     </div>
 
@@ -64,7 +64,7 @@
         required
       >
     </div>
-    <div class="alert alert-danger px-3 py-1" ng-show="addClient.phone.$error.required && addClient.phone.$dirty">
+    <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.phone.$error.required && addClientForm.phone.$dirty">
       Digite um CEP
     </div>
 
@@ -82,7 +82,7 @@
           required
         >
       </div>
-      <div class="alert alert-danger px-3 py-1" ng-show="addClient.address.$error.required && addClient.address.$dirty">
+      <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.address.$error.required && addClientForm.address.$dirty">
         Digite um logradouro
       </div>
 
@@ -98,7 +98,7 @@
           required
         >
       </div>
-      <div class="alert alert-danger px-3 py-1" ng-show="addClient.number.$error.required && addClient.number.$dirty">
+      <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.number.$error.required && addClientForm.number.$dirty">
         Digite um número
       </div>
 
@@ -127,7 +127,7 @@
         required
       >
     </div>
-    <div class="alert alert-danger px-3 py-1" ng-show="addClient.neighborhood.$error.required && addClient.neighborhood.$dirty">
+    <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.neighborhood.$error.required && addClientForm.neighborhood.$dirty">
       Digite um bairro
     </div>
 
@@ -143,7 +143,7 @@
         required
       >
     </div>
-    <div class="alert alert-danger px-3 py-1" ng-show="addClient.city.$error.required && addClient.city.$dirty">
+    <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.city.$error.required && addClientForm.city.$dirty">
       Digite um cidade
     </div>
 
@@ -159,7 +159,7 @@
         required
       >
     </div>
-    <div class="alert alert-danger px-3 py-1" ng-show="addClient.state.$error.required && addClient.state.$dirty">
+    <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.state.$error.required && addClientForm.state.$dirty">
       Digite um estado
     </div>
   </div>
