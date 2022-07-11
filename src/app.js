@@ -1,4 +1,4 @@
-var clientsApp = angular.module("clientsApp",["ngRoute", "firebase"]);
+var clientsApp = angular.module("clientsApp",["ngRoute", "firebase", "ui.mask"]);
 
 clientsApp.config(["$routeProvider", function($routeProvider){
   $routeProvider

@@ -42,13 +42,29 @@
         type="text"
         class="form-control"
         id="phone"
-        placeholder="Telefone"
         ng-model="client.phone"
+        ui-mask="(99) 9?9999-9999"
         ng-required="true"
       >
     </div>
     <div class="alert alert-danger px-3 py-1" ng-show="editClientForm.phone.$invalid && editClientForm.phone.$dirty">
       Digite um telefone
+    </div>
+
+    <div class="form-group py-2">
+      <label for="born">Data Nascimento</label>
+      <input
+        name="born"
+        type="text"
+        class="form-control"
+        id="born"
+        ng-model="client.born"
+        ui-mask="99/99/9999"
+        ng-required="true"
+      >
+    </div>
+    <div class="alert alert-danger px-3 py-1" ng-show="editClientForm.born.$invalid && editClientForm.born.$dirty">
+      Digite uma data de nascimento
     </div>
 
     <div class="form-group col-3 py-2">
@@ -64,7 +80,7 @@
         ng-required="true"
       >
     </div>
-    <div class="alert alert-danger px-3 py-1" ng-show="editClientForm.phone.$invalid && editClientForm.phone.$dirty">
+    <div class="alert alert-danger px-3 py-1" ng-show="editClientForm.cep.$invalid && editClientForm.cep.$dirty">
       Digite um CEP
     </div>
 

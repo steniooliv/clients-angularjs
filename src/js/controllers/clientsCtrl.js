@@ -15,4 +15,27 @@ angular.module("clientsApp")
           });
       }
     }
+
+    $scope.formatPhone = function (phone) {
+      if (!phone) {
+        return "";
+      }
+
+      var location = phone.slice(0, 2);
+      var number = phone.slice(2);
+
+      var p1;
+      var p2;
+
+      if (number.length == 8) {
+        p1 = number.slice(0, 4);
+        p2 = number.slice(4);
+      } else {
+        p1 = number.slice(0, 5);
+        p2 = number.slice(5);
+      }
+
+      return `(${location}) ${p1}-${p2}`;
+
+    }
   });
