@@ -11,10 +11,10 @@
         class="form-control"
         id="name" placeholder="Name"
         ng-model="client.name"
-        required
+        ng-required="true"
       >
     </div>
-    <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.name.$error.required && addClientForm.name.$dirty">
+    <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.name.$invalid && addClientForm.name.$dirty">
       Digite um nome
     </div>
 
@@ -27,10 +27,10 @@
         id="email"
         placeholder="Email"
         ng-model="client.email"
-        required
+        ng-required="true"
       >
     </div>
-    <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.email.$error.required && addClientForm.email.$dirty">
+    <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.email.$invalid && addClientForm.email.$dirty">
       Digite um email
     </div>
 
@@ -44,10 +44,10 @@
         placeholder="Telefone"
         ng-model="client.phone"
         ui-mask="(99) 9?9999-9999"
-        required
+        ng-required="true"
       >
     </div>
-    <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.phone.$error.required && addClientForm.phone.$dirty">
+    <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.phone.$invalid && addClientForm.phone.$dirty">
       Digite um telefone
     </div>
 
@@ -61,10 +61,10 @@
         placeholder="CEP"
         ng-blur="buscarCep(client.cep)"
         ng-model="client.cep"
-        required
+        ng-required="true"
       >
     </div>
-    <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.phone.$error.required && addClientForm.phone.$dirty">
+    <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.phone.$invalid && addClientForm.phone.$dirty">
       Digite um CEP
     </div>
 
@@ -79,10 +79,10 @@
           id="address"
           placeholder="Logradouro"
           ng-model="client.address"
-          required
+          ng-required="true"
         >
       </div>
-      <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.address.$error.required && addClientForm.address.$dirty">
+      <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.address.$invalid && addClientForm.address.$dirty">
         Digite um logradouro
       </div>
 
@@ -95,10 +95,10 @@
           id="number"
           placeholder="Número"
           ng-model="client.number"
-          required
+          ng-required="true"
         >
       </div>
-      <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.number.$error.required && addClientForm.number.$dirty">
+      <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.number.$invalid && addClientForm.number.$dirty">
         Digite um número
       </div>
 
@@ -124,10 +124,10 @@
         id="neighborhood"
         placeholder="Bairro"
         ng-model="client.neighborhood"
-        required
+        ng-required="true"
       >
     </div>
-    <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.neighborhood.$error.required && addClientForm.neighborhood.$dirty">
+    <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.neighborhood.$invalid && addClientForm.neighborhood.$dirty">
       Digite um bairro
     </div>
 
@@ -140,10 +140,10 @@
         id="city"
         placeholder="Cidade"
         ng-model="client.city"
-        required
+        ng-required="true"
       >
     </div>
-    <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.city.$error.required && addClientForm.city.$dirty">
+    <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.city.$invalid && addClientForm.city.$dirty">
       Digite um cidade
     </div>
 
@@ -156,16 +156,22 @@
         id="state"
         placeholder="Estado"
         ng-model="client.state"
-        required
+        ng-required="true"
       >
     </div>
-    <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.state.$error.required && addClientForm.state.$dirty">
+    <div class="alert alert-danger px-3 py-1" ng-show="addClientForm.state.$invalid && addClientForm.state.$dirty">
       Digite um estado
     </div>
   </div>
   
   <div class="my-3 d-grid gap-2">
-    <button type="submit" class="btn btn-primary btn-block">Salvar</button>
+    <button
+      type="submit"
+      class="btn btn-primary btn-block"
+      ng-disabled="addClientForm.$invalid"
+    >
+      Cadastrar
+    </button>
     <a href="#!/clients" class="btn btn-danger">Cancelar</a>
   </div>
 
